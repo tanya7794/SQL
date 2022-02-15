@@ -1,0 +1,39 @@
+SELECT по одному столбцу
+Выведите поле name из таблицы Passenger.
+
+select name from Passenger
+
+SELECT по нескольким столбцам
+Выведите поля member_id, member_name и status из таблицы FamilyMembers.
+
+select member_id, member_name, status 
+from FamilyMembers
+
+SELECT по всем столбцам
+Выведите все столбцы из таблицы Payments.
+
+select *
+from Payments
+
+Получение уникальных записей
+Выполните предложенный ниже запрос, чтобы увидеть список пассажиров. Если присмотреться, то можно увидеть, что пассажир с именем Bruce Willis присутствует здесь дважды (в начале и конце списка).
+Ваша задача заключается в том, чтобы вывести только уникальные имена пассажиров, дополнив предложенный запрос.
+
+SELECT distinct name FROM Passenger
+
+(для выбора уникальных значений используется DISTINCT)
+
+Простая фильтрация по числам
+
+Выведите идентификаторы товаров (поле good) из таблицы Payments, стоимость которых больше 2000 единиц. Стоимость товара хранится в поле unit_price.
+
+select good from payments
+where unit_price > 2000
+
+
+Простая фильтрация по строкам
+Выведите имена (поле member_name) членов семьи из таблицы FamilyMembers, чей статус (поле status) равен "father".
+
+select member_name from FamilyMembers
+where status = 'father'
+
